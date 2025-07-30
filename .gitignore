@@ -1,0 +1,16 @@
+# Docker ignore
+*.log
+Dockerfile.*
+
+# Volumes/data
+data/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db

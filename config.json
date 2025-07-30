@@ -1,0 +1,51 @@
+{
+  "apps": {
+    "http": {
+      "servers": {
+        "myserver": {
+          "listen": [":80"],
+          "routes": [
+            {
+              "match": [
+                {
+                  "host": ["localhost"]
+                }
+              ],
+              "handle": [
+                {
+                  "handler": "static_response",
+                  "body": "Hello, world!"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+    // Add more apps like "tailscale" or "layer4" as needed
+    // For Tailscale example:
+    // "tailscale": {
+    //   "auth_key": "your-auth-key"
+    // }
+    // For L4 example:
+    // "layer4": {
+    //   "servers": {
+    //     "example": {
+    //       "listen": [":80"],
+    //       "routes": [
+    //         {
+    //           "handle": [
+    //             {
+    //               "handler": "proxy",
+    //               "upstreams": [
+    //                 {"dial": ["backend:80"]}
+    //               ]
+    //             }
+    //           ]
+    //         }
+    //       ]
+    //     }
+    //   }
+    // }
+  }
+}

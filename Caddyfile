@@ -1,0 +1,19 @@
+# Sample Caddyfile configuration
+{
+  # Global options
+  auto_https off  # Disable for testing; enable in production
+  # tailscale {}  # Uncomment and configure if using Tailscale
+}
+
+http://localhost:80 {
+  respond "Hello, world!"
+}
+
+# Add more sites and configurations as needed
+# For L4 example:
+# :80 {
+#   layer4 {
+#     match http
+#     proxy tcp backend:80
+#   }
+# }
